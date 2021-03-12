@@ -16,3 +16,4 @@ class ProductPageLocators():
     PRODUCT_NAME = (By.CSS_SELECTOR, '.product_main h1')
     PRODUCT_NAME_MESSAGE = (By.CSS_SELECTOR, '#messages div.alert:nth-child(1) strong')
     PRODUCT_PRICE_MESSAGE = (By.CSS_SELECTOR, '#messages div.alert:nth-child(3) strong')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '#messages div.alert')
