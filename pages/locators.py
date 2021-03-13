@@ -14,10 +14,18 @@ class ProductPageLocators():
     ADD_TO_BASKET = (By.CSS_SELECTOR, '.btn-add-to-basket')
     PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
     PRODUCT_NAME = (By.CSS_SELECTOR, '.product_main h1')
-    PRODUCT_NAME_MESSAGE = (By.CSS_SELECTOR, '#messages div.alert:nth-child(1) strong')
-    PRODUCT_PRICE_MESSAGE = (By.CSS_SELECTOR, '#messages div.alert:nth-child(3) strong')
+    PRODUCT_NAME_MESSAGE = (
+        By.CSS_SELECTOR, '#messages div.alert:nth-child(1) strong')
+    PRODUCT_PRICE_MESSAGE = (
+        By.CSS_SELECTOR, '#messages div.alert:nth-child(3) strong')
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, '#messages div.alert')
+
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.CSS_SELECTOR, ".btn-group a")
+
+
+class BasketPageLocators():
+    BASKET_EMPTY = (By.CSS_SELECTOR, '#content_inner > p')

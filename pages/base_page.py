@@ -17,6 +17,10 @@ class BasePage():
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
+    def go_to_basket_page(self):
+        link = self.browser.find_element(*BasePageLocators.BASKET_LINK)
+        link.click()
+
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
@@ -39,6 +43,10 @@ class BasePage():
         except TimeoutException:
             return False
         return True
+
+    def language_on_page(self):
+        return self.browser.execute_script(
+            "return window.navigator.userLanguage || window.navigator.language")
 
     def open(self):
         self.browser.get(self.url)
