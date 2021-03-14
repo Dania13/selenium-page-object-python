@@ -1,5 +1,5 @@
 import pytest
-import faker
+import time
 from pages.product_page import ProductPage
 from pages.login_page import LoginPage
 from pages.basket_page import BasketPage
@@ -79,8 +79,7 @@ class TestUserAddToBasketFromProductPage:
         link = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
         page = LoginPage(browser, link)
         page.open()
-        faker_generate = faker.Faker()
-        email = faker_generate.email()
+        email = str(time.time()) + "@fakemail.org"
         page.register_new_user(email, '!23@Q6789')
         page.should_be_authorized_user()
 
