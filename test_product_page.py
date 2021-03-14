@@ -1,11 +1,11 @@
-import pytest
 import time
+import pytest
 from pages.product_page import ProductPage
 from pages.login_page import LoginPage
 from pages.basket_page import BasketPage
 
 
-@pytest.mark.parametrize('num', [*range(1, 7),
+@pytest.mark.parametrize('num', [*range(7),
                                  pytest.param(7, marks=pytest.mark.xfail), *range(8, 10)])
 @pytest.mark.need_review
 def test_guest_can_add_product_to_basket(browser, num):
